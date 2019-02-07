@@ -35,5 +35,23 @@ print(pageObj.extractText())
 
 pdfFileObj.close()
 
- 
+
+
+from nltk import word_tokenize
+string=""
+sentence ="helllo my name is jeetu kumar gupta"
+tokens=word_tokenize(sentence)
+print(tokens)
+crtWords=[]
+for i in range(len(tokens)):
+    print(tokens[i])
+
+for w in range(len(tokens)):
+    text=TextBlob(tokens[w])
+    crtText=text.correct()
+    crtWords.append(crtText)
+print (crtWords)
+
+
+
 

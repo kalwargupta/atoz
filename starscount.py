@@ -13,7 +13,7 @@ import glob
 
 from skimage.io import imread
 
-example_file = glob.glob("stars.jpg")[0]
+example_file = glob.glob("star.jpg")[0]
 im= imread(example_file, as_grey=True)
 
 blob_log = blob_log(im, max_sigma=30,num_sigma=10, threshold=.1)
